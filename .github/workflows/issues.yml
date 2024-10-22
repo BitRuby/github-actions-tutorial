@@ -1,8 +1,10 @@
 name: Track issues
 on: issues
 jobs:
-  issue:
+  iss:
     runs-on: ubuntu-latest
     steps:
+      - name: Get Code
+        uses: actions/checkout@v4
       - name: Output Issues
-      - run: echo "${{toJSON(jobs)}}"
+        run: echo "${{toJSON(github)}}"
